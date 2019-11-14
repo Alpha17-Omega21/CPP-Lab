@@ -13,12 +13,16 @@ Use object array to input details of 5 books.
 #include <iostream.h>
 #include <conio.h>
 #include <string.h>
+#include<stdio.h>
 class  Book{
-
+public:
 int book_code,cost;
 char title[90],publisher[90],author[90];
-
-public:
+/*int f;
+      Book()
+      {
+	 f=0;
+      }*/
 void input_data(){
 
 cout<<"BOOK CODE: ";
@@ -36,19 +40,20 @@ cin>>cost;
 
 void output_data(){
 
-cout<<"BOOK CODE: "<<book_code;
-cout<<"TITLE: "<<title;
-cout<<"AUTHOR: "<<author;
-cout<<"PUBLISHER: "<<publisher;
-cout<<"PRICE: "<<cost;
+cout<<"BOOK CODE: "<<book_code<<endl;
+cout<<"TITLE: "<<title<<endl;
+cout<<"AUTHOR: "<<author<<endl;
+cout<<"PUBLISHER: "<<publisher<<endl;
+cout<<"PRICE: "<<cost<<endl;
 
 
 
 }
 
-void search(char *book_name){
+void search(){
 
-    if(strcmp(book_name,title)==0){
+
+
 cout<<"Here's the search result: \n";
 
 cout<<"BOOK CODE: "<<book_code<<endl;
@@ -57,22 +62,20 @@ cout<<"AUTHOR: "<<author<<endl;
 cout<<"PUBLISHER: "<<publisher<<endl;
 cout<<"PRICE: "<<cost;
 
-    }
-
-
 
 }
 
 };
 
 void main(){
+int f=0;
     clrscr();
     char bname[90];
 Book stuff[5];
 
 //INPUT
 cout<<"Enter the Book code, title, author, publisher and cost of 5 Books\n";
-for (int i = 0; i < 5; i++)
+for (int i = 0; i < 2; i++)
 {  cout<<"Book No."<<i+1<<endl;
    stuff[i].input_data();
     cout<<endl;
@@ -83,7 +86,7 @@ clrscr();
 
 //OUTPUT
 cout<<"The details of 5 Books are :\n\n";
-for (i = 0; i < 5; i++)
+for (i = 0; i < 2; i++)
 {  cout<<"Book No."<<i+1<<endl;
    stuff[i].output_data();
     cout<<endl;
@@ -96,12 +99,20 @@ clrscr();
 cout<<"BOOK SEARCH\n";
 cout<<"Enter the name of the book: ";
 cin>>bname;
-for (i = 0; i < 5; i++)
+for (i = 0; i < 2; i++)
 {
-   stuff[i].search(bname);
-
+//   stuff[i].search(bname);
+//   if(stuff[i].book_code==
+    if(strcmp(stuff[i].title,bname)==0){
+	f=1;
+	stuff[i].search();
+	}
 }
+    if(f==0)
+    {
+	cout<<"No found....";
 
+    }
 
 
 
