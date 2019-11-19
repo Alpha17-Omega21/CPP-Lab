@@ -12,10 +12,6 @@ class Student{
 protected:
 char name[90],ID[10],address[90];
 double grade,age;
-
-public:
-
-
 int Passed(double grade){ 
     
 //Turbo C IDE doesn't support boolean keywords as it's an outdated and obsolete program

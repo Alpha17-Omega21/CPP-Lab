@@ -1,4 +1,4 @@
- /* Create a class called add with two private variables. Accept values in these variables in the
+/* Create a class called add with two private variables. Accept values in these variables in the
 	public function accept(). Display their sum in display() function. In the main () function,
 	create an object of class add . Declare a pointer to the object. Using pointer accept, add
 	and display the sum of 2 numbers. */
