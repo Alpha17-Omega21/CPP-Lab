@@ -26,7 +26,7 @@ float length,width;
 void setlength();
 void setwidth();
 float area();
-int sameArea();
+int sameAreanot();
 
 };
 void main(){}
