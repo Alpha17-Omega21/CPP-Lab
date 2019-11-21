@@ -3,23 +3,23 @@
  #include<iostream.h>
  #include<conio.h>
  #include<stdlib.h>
- class overload1
+ class OverLoad
  {
 	private:
 	int a,b,c;
 	public:
-    overload1(int x,int y,int z)
+    OverLoad(int x,int y,int z)
 	{
 		a=x;
 		b=y;
 		c=z;
 	}
-	overload1(int x,int y)
+	OverLoad(int x,int y)
 	{
 		a=x;
 		b=y;
 	}
-       ~overload1()
+       ~OverLoad()
 	{
 		cout<<"End of the prgram";
 		getch();
@@ -27,19 +27,19 @@
 	}
     void add()
     {
-	   cout<<"The sum of these three numbers:"<<a+b+c<<endl;
+	   cout<<"The sum of these three numbers are :"<<a+b+c<<endl;
     }
 	void mult()
 	{
-		cout<<"The product of these two numbers:"<<a*b<<endl;
+		cout<<"The product of these two numbers are:"<<a*b<<endl;
 	}
 
  };
  void main()
  {
 	 clrscr();
-	 overload1 c(3,4,2);
-	 overload1 v(5,2);
+	 OverLoad c(3,4,2);
+	 OverLoad v(5,2);
 	 c.add();
 	 c.mult();
        //	 getch();
