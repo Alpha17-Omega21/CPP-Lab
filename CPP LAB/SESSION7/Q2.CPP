@@ -15,7 +15,7 @@ char AccountHolder[90];
 
 public:
 
-ACCOUNT(int acc_num,char acc_hold[90],int bal){
+ACCOUNT(long int acc_num,char acc_hold[90],long int bal){
 AccountNumber=acc_num;
 strcpy(AccountHolder,acc_hold);
 Balance=bal;
