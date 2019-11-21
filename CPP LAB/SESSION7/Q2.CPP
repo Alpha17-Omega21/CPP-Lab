@@ -1,14 +1,16 @@
 /*
-Write a C++ program to find out the sum of N numbers, by defining proper class, constructor
-and methods.
+Write a CPP program to create an ACCOUNT Class. It should have following data members:
+AccountNumber, AccountHolder, Balance
+Use constructor to initialize the data members. Define methods for crediting and debiting
+amounts to the account.
 */
 #include <iostream.h>
 #include <conio.h>
 #include <string.h>
-#include<dos.h>
-
+#include <dos.h>
+#include <stdlib.h>
 class ACCOUNT{
-int AccountNumber,Balance;
+long int AccountNumber,Balance,Credit,Debit;
 char AccountHolder[90];
 
 public:
@@ -19,16 +21,88 @@ strcpy(AccountHolder,acc_hold);
 Balance=bal;
 
 }
-void bank(int cred,int deb){
-int Credit = cred;
-int Debit = deb;
+
+int menu(){
+    char choice;
+	repeat:
+    cout<<"MAIN MENU\n"<<endl;
+	cout<<"(W)ithdraw money"<<endl;
+	cout<<"(D)eposit money"<<endl;
+	cout<<"(V)iew Balance"<<endl;
+	cout<<"(Q)uit Program"<<endl;
+	cout<<"Enter W, D, V or Q to execute the process: ";
+	cin>>choice;
+switch(choice){
+
+	case 'W':
+	case 'w':
+	withdraw();
+    break;
+
+	case 'D':
+	case 'd':
+    deposit();
+    break;
+
+	case 'V':
+	case 'v':
+    cout<<endl<<"Your Balance is Rs "<<Balance<<endl;
+	goto repeat;
+
+
+	case 'Q':
+	case 'q':
+	for (int i=3;i>=1;i--){
+    clrscr();
+    cout<<"Quitting the program in "<<i<< " seconds.";
+    delay(1000);
+
+	}
+	exit(0);
+    break;
+
+	default:
+    cout<<"\nInvalid choice. Please enter the given option using characters surrounding the brackets";
+	goto repeat;
+
+}
+
+
+
+}
+
+int deposit(){
+cout<<endl<<"Enter how much you need to credit to your account : ";
+cin>>Credit;
+cout<<"Processing your request....";
 Balance = Balance + Credit;
+delay(200*10);
+clrscr();
+cout<<endl<<"Account Number  "<<AccountNumber<<endl;
+cout<<endl<<"Name : "<<AccountHolder<<endl;
+cout<<endl<<"Your Balance is Rs "<<Balance<<" since you credited Rs "<<Credit<<endl;
+getch();
+cout<<endl<<"\nReturning to main menu....";
+delay(1000);
+clrscr();
+menu();
+}
+
+int withdraw(){
+cout<<endl<<"Enter how much you need to debit from your account : ";
+cin>>Debit;
+cout<<"Processing your request....";
 Balance = Balance - Debit;
 delay(200*10);
 clrscr();
 cout<<endl<<"Account Number  "<<AccountNumber<<endl;
 cout<<endl<<"Name : "<<AccountHolder<<endl;
-cout<<endl<<"Your Balance is Rs "<<Balance<<" since you credited Rs "<<Credit<<" and debited Rs "<<Debit<<endl;
+cout<<endl<<"Your Balance is Rs "<<Balance<<" since you debited Rs "<<Debit<<endl;
+getch();
+cout<<endl<<"\nReturning to main menu....";
+delay(1000);
+clrscr();
+menu();
 }
 
 };
@@ -46,12 +120,7 @@ char AccountHolder[90];
     cout<<endl<<"Enter your Balance : ";
 	cin>>Balance;
 	ACCOUNT trial(AccountNumber,AccountHolder,Balance);
-	cout<<endl<<"Enter how much you need to credit to your account : ";
-	cin>>Credit;
-	cout<<endl<<"Enter how much you need to debit from your account : ";
-	cin>>Debit;
-	trial.bank(Credit,Debit);
-
-	getch();
+    clrscr();
+    trial.menu();
 	return 0;
 }
