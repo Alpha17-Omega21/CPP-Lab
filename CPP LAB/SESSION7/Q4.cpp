@@ -1,44 +1,44 @@
 /*Using main method, input an integer below 60.
 Using a class called Fib generate the Fibonacci series till this integer. Use constructor*/
-#include<iostream.h>
-#include<conio.h>
-class Fib
+#include<iostream.h>//library header
+#include<conio.h>//library header
+class Fib//class creation
 {
 	public:
-	double i,t,x,y,p,z;
+	double i,t,x,y,p,z;//delares the variables
 	Fib(int v)
 	{
-		t=v;
-		x=0;
-		y=1;
+		t=v;//intialization
+		x=0;//intialization
+		y=1;//intialization
 	}
 	void ser()
 	{
-	cout<<"The fibonacci series:"<<x<<","<<y<<",";
+	cout<<"The fibonacci series:"<<x<<","<<y<<",";//output
 	p=2;
 	while(p<t)
 	   {
-		z=x+y;
+		z=x+y;//value assignment process
 		p++;
-		cout<<z<<",";
-		x=y;
-		y=z;
+		cout<<z<<",";//output
+		x=y;//value assignment process
+		y=z;//value assignment process
 	   }
 	}
 };
 void main()
 {
 	clrscr();
-	int n;
-	cout<<"Input an integer below 60:";
-	cin>>n;
-	if(n<60)
+	int n;//delares the variables
+	cout<<"Input an integer below 60:";//output
+	cin>>n;//input
+	if(n<60)//if condition
 	{
 		Fib h(n);
 		h.ser();
 	}
 	else{
-		cout<<"Nope. Input rejected (no numbers more than 60) ";
+		cout<<"Nope. Input rejected (no numbers more than 60) ";//output
 	}
 	getch();
 }
