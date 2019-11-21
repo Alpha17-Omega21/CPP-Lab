@@ -38,7 +38,7 @@ void main()
 		h.ser();
 	}
 	else{
-		cout<<"Shrug......";
+		cout<<"Nope. Input rejected (no numbers more than 60) ";
 	}
 	getch();
 }
