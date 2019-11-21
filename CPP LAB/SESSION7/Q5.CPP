@@ -7,18 +7,18 @@ Use constructor.*/
 #include<string.h>
 class palindrome
 {
-	char y[50],r[50];
+	char str[50],rev[50];
 	int z;
 	public:
 	palindrome(char x[50])
 	{
-		strcpy(y,x);
+		strcpy(str,x);
 	}
 	int pldrm()
 	{
-		strcpy(r,y);
-		cout<<endl<<strrev(r)<<endl;
-		z=strcmpi(y,r);
+		strcpy(rev,str);
+		cout<<endl<<strrev(rev)<<endl;
+		z=strcmpi(str,rev);
 		return z;
 	}
 };
