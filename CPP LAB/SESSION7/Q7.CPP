@@ -34,29 +34,29 @@ Using constructor overloading.
 		getch();
 		exit (0);
 	}
-	void tri()
+	void triangle()
 	{
 		s=(a+b+c)/2;
 		a=sqrt(s*(s-a)*(s-b)*(s-c));
-		cout<<"The area of the triangle:"<<a<<endl;
+		cout<<"The area of the triangle is :"<<a<<endl;
 	}
-	void rec()
+	void rectangle()
 	{
-		cout<<"The area of the rectangle:"<<d*e<<endl;
+		cout<<"The area of the rectangle is :"<<d*e<<endl;
 	}
-	void rad()
+	void radius()
 	{
 		double p=3.14;
 		z=p*f*f;
-		cout<<"The area of the circle:"<<z<<endl;
+		cout<<"The area of the circle is :"<<z<<endl;
 	}
  };
  void main()
  {
 	 clrscr();
 	 Shapes p(3.2,4.0,5.1), q(15.0,20.0),r(5.2);
-	 p.tri();
-	 q.rec();
-	 r.rad();
+	 p.triangle();
+	 q.rectangle();
+	 r.radius();
  }
  
