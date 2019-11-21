@@ -59,13 +59,19 @@ else {
     goto repeat;
 }
 
+cout<<"ID : "<<ID<<endl;
+cout<<"NAME : "<<name<<endl;
+cout<<"ADDRESS : "<<address<<endl;
+cout<<"AGE : "<<age<<endl;
+cout<<"EXAMINATION RESULT : ";
+
 if(x==1){
-cout<<name<<", You passed!";
+cout<<"PASSED";
 
 }
 
 else{
-cout<<name<<", You failed!";
+cout<<"FAILED";
 
 
 }
