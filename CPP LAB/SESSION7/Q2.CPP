@@ -108,7 +108,7 @@ menu();
 };
 
 int main(){
-int AccountNumber,Balance,Credit,Debit;
+long int AccountNumber,Balance;
 char AccountHolder[90];
 	clrscr();
 
