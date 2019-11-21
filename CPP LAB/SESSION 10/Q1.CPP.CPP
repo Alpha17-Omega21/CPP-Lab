@@ -8,7 +8,8 @@ Using above classes, write a main (), to accept two values and find sum and prin
 class base
 {
 	int m;
-	base( int a)
+	public:
+	base(int a)
 	{
 		m=a;
 	}
@@ -17,28 +18,35 @@ class base
 
 class der
 {
-	int n;
-	public:
-	int sum( int b)
+	int n,temp;
+	public: /*
+	der(int m){
+
+		base w(m);
+		temp=w.q;
+	}                */
+	int sum(int b, int q)
 	{
+		base w(q);
+		temp=w.m;
 		n=b;
-		return m+n;
+		return temp+n;
 	}
 };
 
 void main()
-{    
+{
 	int m,n;
 	clrscr();
-	
+
     cout<<"Enter any two integers :"<<endl;
     cin>>m>>n;
-       
-	base y(m);
-	
-	der x(n);
-	
-	cout<<"Sum of two integers :"<<x.sum();
-	
+
+
+
+	der x;
+
+	cout<<"Sum of two integers :"<<x.sum(n,m);
+
 	getch();
 }
