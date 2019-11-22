@@ -18,11 +18,6 @@ class  Book{
 public:
 int book_code,cost;
 char title[90],publisher[90],author[90];
-/*int f;
-      Book()
-      {
-	 f=0;
-      }*/
 void input_data(){
 
 cout<<"BOOK CODE: ";
@@ -101,8 +96,7 @@ cout<<"Enter the name of the book: ";
 cin>>bname;
 for (i = 0; i < 2; i++)
 {
-//   stuff[i].search(bname);
-//   if(stuff[i].book_code==
+
     if(strcmp(stuff[i].title,bname)==0){
 	f=1;
 	stuff[i].search();
@@ -110,7 +104,7 @@ for (i = 0; i < 2; i++)
 }
     if(f==0)
     {
-	cout<<"No found....";
+	cout<<"No such book was found....";
 
     }
 
