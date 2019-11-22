@@ -9,45 +9,45 @@ Declare public member functions to
 Use object array for 10 employees.
 */
 
-#include <iostream.h>
-#include <conio.h>
+#include <iostream.h>//library header
+#include <conio.h>//library header
 
-class  EMPLOYEE{
+class  EMPLOYEE{ //class creation
 
-int Emp_no;
-char Emp_name[90],Designation[90];
+int Emp_no;// declaration of variables
+char Emp_name[90],Designation[90];// declaration of variables
 
-public:
-void getdata(){
+public: //access specifiers
+void getdata(){//function creation
 
-cin>>Emp_no>>Emp_name>>Designation;
+cin>>Emp_no>>Emp_name>>Designation; //input
 
 }
 
-void display(){
+void display(){//function creation
 
-cout<<"ID: "<<Emp_no<<endl<<"NAME : "<<Emp_name<<endl<<"Designation : "<<Designation<<"\n";
+cout<<"ID: "<<Emp_no<<endl<<"NAME : "<<Emp_name<<endl<<"Designation : "<<Designation<<"\n";  //output
 
 }
 
 };
 
 void main(){
-    clrscr();
+    clrscr();//clears the screen
 EMPLOYEE EMP[10];
-cout<<"Enter the IDs,Names and Location of 10 Employees\n";
+cout<<"Enter the IDs,Names and Location of 10 Employees\n"; //output
 for (int i = 0; i < 10; i++)
-{  cout<<"Employee No."<<i+1<<endl;
-   EMP[i].getdata();
+{  cout<<"Employee No."<<i+1<<endl; //output
+   EMP[i].getdata();//executes the function
     cout<<endl;
 }
 
-clrscr();
-cout<<"The details of 10 employees are :\n\n";
+clrscr();//clears the screen
+cout<<"The details of 10 employees are :\n\n"; //output
 
 for (i = 0; i < 10; i++)
-{  cout<<"Employee No."<<i+1<<endl;
-   EMP[i].display();
+{  cout<<"Employee No."<<i+1<<endl; //output
+   EMP[i].display();//executes the function
     cout<<endl;
 }
 

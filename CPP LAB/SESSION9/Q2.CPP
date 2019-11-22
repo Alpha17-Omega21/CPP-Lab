@@ -4,37 +4,39 @@ named printArea ().
 Create another class named Rectangle which inherits Shape class.
 The Rectangle class contains the method accept () that
 accepts the sides of the rectangle and prints the area.*/
-#include<iostream.h>
-#include<conio.h>
-class Shape{
-    protected:
-    int a_1,a_2,area;
-    public:
-    int printArea(int x,int y)
+
+
+#include<iostream.h>//library header
+#include<conio.h>//library header
+class Shape{//parent class
+    protected://access specifiers
+    int a_1,a_2,area;//declaration of variables
+    public://access specifiers
+    int printArea(int x,int y)//member functon of class 'Shape'
     {
           area=x*y;
-          return area;
+          return area;//returns the value
     }
 };
-class rectangle: public Shape
+class rectangle: public Shape //derived class
 {
-    public:
-    int y;
-    void accept()
+    public://access specifiers
+    int y;//declaration of variables
+    void accept()//member functon of class 'Shape'
     {
-    cout<<"Enter any number A:";
-    cin>>a_1;
-    cout<<"Enter any number B:";
-    cin>>a_2;
+    cout<<"Enter any number A:";//output
+    cin>>a_1;//input
+    cout<<"Enter any number B:";//output
+    cin>>a_2;//input
     y=printArea(a_1,a_2);
-    cout<<"The area of rectangle:"<<y;
+    cout<<"The area of rectangle:"<<y;//output
     }
 
 };
 void main()
 {
-    clrscr();
-    rectangle S;
+    clrscr();//clears the screen
+    rectangle S;//object creation
     S.accept();
     getch();
 }

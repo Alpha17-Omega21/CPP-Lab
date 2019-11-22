@@ -6,19 +6,19 @@ is above 70.0, then Passed() returns true, otherwise it returns false.
 Input the grade using a public method accept () in the child class.*/
 
 
-#include<iostream.h>
-#include<conio.h>
-class Student{
-protected:
-char name[90],ID[10],address[90];
-double grade,age;
+#include<iostream.h>//library header
+#include<conio.h>//library header
+class Student{//parent class
+protected://access specifier
+char name[90],ID[10],address[90];//declaration of variables
+double grade,age;//declaration of variables
 int Passed(double grade){ 
     
 //Turbo C IDE doesn't support boolean keywords as it's an outdated and obsolete program
 //So, we use int datatype to return either 0 or 1
                             
-int false=0,true=1;
-if (grade>70.0){return true;}
+int false=0,true=1;//declaration of variables
+if (grade>70.0){return true;}//if condition
 else{return false;}
 
 }
@@ -26,52 +26,52 @@ else{return false;}
 };
 
 
-class Undergrad:public Student
+class Undergrad:public Student//derived class
 {
-int x;
+int x;//declaration of variable
 
-public:
+public://access specifier
 void accept(){
+cout<<"\n\nENTER YOUR DETAILS\n";//output
+cout<<"Enter your ID : ";//output
+cin>>ID;//input
 
-cout<<"Enter your ID : ";
-cin>>ID;
+cout<<"Enter your name : ";//output
+cin>>name;//input
 
-cout<<"Enter your name : ";
-cin>>name;
+cout<<"Enter your address : ";//output
+cin>>address;//input
 
-cout<<"Enter your address : ";
-cin>>address;
-
-cout<<"Enter your age : ";
-cin>>age;
+cout<<"Enter your age : ";//output
+cin>>age;//input
 
 repeat:
-cout<<"Enter your score : ";
-cin>>grade;
+cout<<"Enter your score : ";//output
+cin>>grade;//input
 
-if(grade>0 && grade<=100){
+if(grade>0 && grade<=100){//if condition
 x=Passed(grade);
 }
 else {
 
-    cout<<"Enter the score between 0 to 100!"<<endl;
+    cout<<"Enter the score between 0 to 100!"<<endl;//output
 
     goto repeat;
 }
+cout<<"\n\nDETAILS OF THE EXAMINEE";//output
+cout<<"\n\nID : "<<ID<<endl;//output
+cout<<"NAME : "<<name<<endl;//output
+cout<<"ADDRESS : "<<address<<endl;//output
+cout<<"AGE : "<<age<<endl;//output
+cout<<"EXAMINATION RESULT : ";//output
 
-cout<<"ID : "<<ID<<endl;
-cout<<"NAME : "<<name<<endl;
-cout<<"ADDRESS : "<<address<<endl;
-cout<<"AGE : "<<age<<endl;
-cout<<"EXAMINATION RESULT : ";
-
-if(x==1){
-cout<<"PASSED";
+if(x==1){//if condition
+cout<<"PASSED";//output
 
 }
 
 else{
-cout<<"FAILED";
+cout<<"FAILED";//output
 
 
 }
@@ -84,7 +84,6 @@ cout<<"FAILED";
 
 void main(){
 clrscr();
-int marks;
 Undergrad exam;
 exam.accept();
 

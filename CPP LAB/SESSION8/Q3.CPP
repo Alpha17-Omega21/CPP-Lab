@@ -10,52 +10,52 @@ ii) Search function to search for a book name
 Use object array to input details of 5 books.
 */
 
-#include <iostream.h>
-#include <conio.h>
-#include <string.h>
-#include<stdio.h>
-class  Book{
-public:
-int book_code,cost;
-char title[90],publisher[90],author[90];
-void input_data(){
+#include <iostream.h>//library header
+#include <conio.h>//library header
+#include <string.h>//library header
+#include<stdio.h>//library header
+class  Book{ //class creation
+public: //access specifiers
+int book_code,cost; //declaring the variables
+char title[90],publisher[90],author[90]; //declaring the variables
+void input_data(){//input_data() function
 
-cout<<"BOOK CODE: ";
-cin>>book_code;
-cout<<"TITLE: ";
-cin>>title;
-cout<<"AUTHOR: ";
-cin>>author;
-cout<<"PUBLISHER: ";
-cin>>publisher;
-cout<<"PRICE: ";
-cin>>cost;
-
-}
-
-void output_data(){
-
-cout<<"BOOK CODE: "<<book_code<<endl;
-cout<<"TITLE: "<<title<<endl;
-cout<<"AUTHOR: "<<author<<endl;
-cout<<"PUBLISHER: "<<publisher<<endl;
-cout<<"PRICE: "<<cost<<endl;
-
-
+cout<<"BOOK CODE: "; //output
+cin>>book_code;//input
+cout<<"TITLE: "; //output
+cin>>title;//input
+cout<<"AUTHOR: "; //output
+cin>>author;//input
+cout<<"PUBLISHER: "; //output
+cin>>publisher;//input
+cout<<"PRICE: "; //output
+cin>>cost;//input
 
 }
 
-void search(){
+void output_data(){//output_data() function
+
+cout<<"BOOK CODE: "<<book_code<<endl; //output
+cout<<"TITLE: "<<title<<endl; //output
+cout<<"AUTHOR: "<<author<<endl; //output
+cout<<"PUBLISHER: "<<publisher<<endl; //output
+cout<<"PRICE: "<<cost<<endl; //output
 
 
 
-cout<<"Here's the search result: \n";
+}
 
-cout<<"BOOK CODE: "<<book_code<<endl;
-cout<<"TITLE: "<<title<<endl;
-cout<<"AUTHOR: "<<author<<endl;
-cout<<"PUBLISHER: "<<publisher<<endl;
-cout<<"PRICE: "<<cost;
+void search(){//search() function
+
+
+
+cout<<"Here's the search result: \n";//output
+
+cout<<"BOOK CODE: "<<book_code<<endl;//output
+cout<<"TITLE: "<<title<<endl;//output
+cout<<"AUTHOR: "<<author<<endl;//output
+cout<<"PUBLISHER: "<<publisher<<endl;//output
+cout<<"PRICE: "<<cost;//output
 
 
 }
@@ -63,48 +63,48 @@ cout<<"PRICE: "<<cost;
 };
 
 void main(){
-int f=0;
-    clrscr();
-    char bname[90];
+int f=0; //declaring the variables
+    clrscr();// clears the screen
+    char bname[90]; //declaring the variables
 Book stuff[5];
 
 //INPUT
-cout<<"Enter the Book code, title, author, publisher and cost of 5 Books\n";
-for (int i = 0; i < 2; i++)
-{  cout<<"Book No."<<i+1<<endl;
+cout<<"Enter the Book code, title, author, publisher and cost of 5 Books\n";//output
+for (int i = 0; i < 2; i++) //for loop iteration
+{  cout<<"Book No."<<i+1<<endl;//output
    stuff[i].input_data();
     cout<<endl;
 }
-cout<<"Press Enter ";
+cout<<"Press Enter ";//output
 getch();
-clrscr();
+clrscr();// clears the screen
 
 //OUTPUT
-cout<<"The details of 5 Books are :\n\n";
-for (i = 0; i < 2; i++)
-{  cout<<"Book No."<<i+1<<endl;
+cout<<"The details of 5 Books are :\n\n";//output
+for (i = 0; i < 2; i++) //for loop iteration
+{  cout<<"Book No."<<i+1<<endl;//output
    stuff[i].output_data();
     cout<<endl;
 }
-cout<<"Press Enter ";
+cout<<"Press Enter ";//output
 getch();
-clrscr();
+clrscr();// clears the screen
 
 //BOOK SEARCH
-cout<<"BOOK SEARCH\n";
-cout<<"Enter the name of the book: ";
-cin>>bname;
-for (i = 0; i < 2; i++)
+cout<<"BOOK SEARCH\n";//output
+cout<<"Enter the name of the book: ";//output
+cin>>bname; //input
+for (i = 0; i < 2; i++) //for loop iteration
 {
 
-    if(strcmp(stuff[i].title,bname)==0){
+    if(strcmp(stuff[i].title,bname)==0){// checks the condition
 	f=1;
 	stuff[i].search();
 	}
 }
-    if(f==0)
+    if(f==0)// checks the condition
     {
-	cout<<"No such book was found....";
+	cout<<"No such book was found....";//output
 
     }
 

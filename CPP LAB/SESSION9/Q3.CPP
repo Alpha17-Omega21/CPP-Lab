@@ -6,37 +6,39 @@ accept () - to accept an integer
 display () - to add x to accepted value and print it
 In the main () function,
 create an object of class der and perform its functions*/
-#include<iostream.h>
-#include<conio.h>
-class add{
-    protected:
-    int x;
+
+
+#include<iostream.h>//library function
+#include<conio.h>//library function
+class add{//parent class
+    protected://access specifier
+    int x;//declaration of variables
 
 
 
 };
-class der: private add
-{  int y;
-   public:
-   void intial()
+class der: private add//derived class
+{  int y;//declaration of variables
+   public://access specifier
+   void intial()//memeber fucntion of class 'der'
     {
-	x=5;
+	x=5;//intialization
     }
-    void accept()
+    void accept()//memeber fucntion of class 'der'
     {
-	cout<<"Enter any number: ";
-	cin>>y;
+	cout<<"Enter any number: ";//output
+	cin>>y;//input
     }
 
-   void display()
+   void display()//memeber fucntion of class 'der'
     {
-	intial();
-	accept();
-	cout<<"The value of X is 5 "<<endl;
-	cout<<"The sum of ("<<x<<" + "<<y<<") = "<<x+y;
+	intial();//function
+	accept();//function
+	cout<<"The value of X is 5 "<<endl;//output
+	cout<<"The sum of ("<<x<<" + "<<y<<") = "<<x+y;//output
     }
 };
-void main()
+void main()//main()
 {
   clrscr();
   der g;

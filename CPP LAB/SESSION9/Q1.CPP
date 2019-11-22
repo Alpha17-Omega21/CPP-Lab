@@ -6,48 +6,48 @@
 Derive a class called totalcost from stock with member function tot() which accepts the
 number of items needed from the user and finds total cost. Display the details of items
 bought.*/
-#include<iostream.h>
-#include<conio.h>
+#include<iostream.h>//Library header
+#include<conio.h>//Library header
 class stock{
-      protected:
-      int price,total,item1;
-      char item[50];
-      public:
-      void accept()
+      protected://access specifiers
+      int price,total,item1;//declaration of variables 
+      char item[50];//declaration of variables 
+      public://access specifiers
+      void accept()//member function of class 'stock'
       {
-	  cout<<"Enter item name:";
-	  cin>>item;
-	  cout<<"Enter the price:";
-	  cin>>price;
+	  cout<<"Enter item name:";//output
+	  cin>>item;//input
+	  cout<<"Enter the price:";//output
+	  cin>>price;//input
       }
-      void display()
+      void display()//member function of class 'stock'
       {
-	  cout<<"Enter the number of "<<item<<" :";
-	  cin>>item1;
+	  cout<<"Enter the number of "<<item<<" :";//output
+	  cin>>item1;//input
 	  total=price*item1;
-	  cout<<"\n\nBill"<<endl;
-	  cout<<"-------------------------"<<endl;
-	  cout<<"Item name:"<<item<<endl;
-	  cout<<"The price of the "<<item<<":"<<price<<endl;
-	  cout<<"========================="<<endl;
-	  cout<<"The total cost:"<<total<<endl;
-	  cout<<"-------------------------"<<endl;
+	  cout<<"\n\nSHOPPING RECEIPT"<<endl;//output
+	  cout<<"-------------------------"<<endl;//output
+	  cout<<"Item name:"<<item<<endl;//output
+	  cout<<"The price of the "<<item<<":"<<price<<endl;//output
+	  cout<<"========================="<<endl;//output
+	  cout<<"The total cost:"<<total<<endl;//output
+	  cout<<"-------------------------"<<endl;//output
 
       }
 };
-class totalcost: public stock
+class totalcost: public stock//derived class
 {
-   public:
+   public://access specifiers
    void tot()
    {
-       accept();
-       display();
+       accept();//function
+       display();//function
    }
 };
 void main()
 {
     clrscr();
     totalcost k;
-    k.tot();
+    k.tot();//function
     getch();
 }
