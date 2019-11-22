@@ -10,28 +10,30 @@ create an object of class der and perform its functions*/
 #include<conio.h>
 class add{
     protected:
-    int x,y;
-    public:
-    void intial()
+    int x;
+
+
+
+};
+class der: private add
+{  int y;
+   public:
+   void intial()
     {
 	x=5;
     }
     void accept()
     {
-	cout<<"Enter any number:";
+	cout<<"Enter any number: ";
 	cin>>y;
     }
 
-
-};
-class der: private add
-{
-   public:
    void display()
     {
 	intial();
 	accept();
-	cout<<"The add of 5 "<<"+ "<<y<<" :"<<x+y;
+	cout<<"The value of X is 5 "<<endl;
+	cout<<"The sum of ("<<x<<" + "<<y<<") = "<<x+y;
     }
 };
 void main()
