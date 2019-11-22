@@ -1,3 +1,4 @@
+
 /*1. Create a class called base with private variable ‘m’. Accept value of ‘m’.
 Declare a friend class der. In der class, declare private variable ‘n’ and public function sum ().
 In sum (), accept value ‘n’, and find sum of m and n. Print the result.
@@ -49,4 +50,4 @@ void main()
 	cout<<"Sum of two integers :"<<x.sum(n,m);
 
 	getch();
-}
+
