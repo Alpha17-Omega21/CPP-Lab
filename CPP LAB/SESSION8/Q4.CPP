@@ -8,12 +8,13 @@ Allow a customer to buy items from the shop and display his bill. Use object arr
 #include <iostream.h>
 #include <conio.h>
 #include <string.h>
+#include <stdlib.h>
 class  Shop{
-
+public:
 int quant,cost;
 char prodname[90],prod_id[90];
 
-public:
+
 void input_data(){
 
 cout<<"PRODUCT ID: ";
@@ -35,10 +36,12 @@ cout<<"COST: "<<cost<<endl;
 
 }
 
-int shopping(char *item_name){
+
+int shopping(){
+
 int repeat=0;
 char ans;
-    if(strcmpi(item_name,prodname)==0){
+  //  if(strcmpi(item_name,prodname)==0){
 
 cout<<"How many of "<<prodname<<" do you need? : ";
 cin>>quant;
@@ -54,13 +57,13 @@ cout<<"COST: Rs "<<cost*quant<<endl;
 //SHOPPING AGAIN
 getch();
 mistake:
-cout<<"Do you wish to buy another item? (Enter Y (for Yes) or N (For No) : ";
+cout<<"Do you wish to buy another item? (Enter Y (for Yes) or N (For No) : "<<endl;
 cin>>ans;
 switch (ans)
 {
 case 'y':
 case 'Y':
-repeat++;
+repeat=1;
 return repeat;
 break;
 
@@ -73,12 +76,10 @@ default:
 cout<<"Please enter either Y or N ";
 getch();
 goto mistake;
-break;
+
 }
 
 
-}
-else{return repeat;}
 
 
 
@@ -120,16 +121,37 @@ cout<<"SHOPPING CART\n";
 cout<<"Enter the name of the item you wish to buy: ";
 cin>>item;
 
-for (i = 0; i < 3; i++)
-{  
-   int repeat;
-
-   repeat=stuff[i].shopping(item);
-
-   if (repeat!=0){goto again;}
-
+int limit=0;
+for (i = 0; i < 3; i++){
+int repeat;
+    if(strcmpi(item,stuff[i].prodname)==0){
+	repeat=stuff[i].shopping();
+	 if (repeat!=0){goto again;}
+    }else{limit++;}
 }
 
+char x;
+if (limit==3){
+cout<<endl<<"Sorry, no such item was found. Would you like to try again? "<<endl;
+cout<<"(Y for Yes, N for No) : ";
+wrong:
+cin>>x;
+switch(x){
+    case 'Y':
+    case 'y':
+    goto again;
+    break;
+
+    case 'N':
+    case 'n':
+    exit(0);
+    break;
+
+    default:
+    cout<<endl<<"Sorry, didn't quite get what you wanted. (Press Either Y or N ) : ";
+    goto wrong;
+}
+}
 
 
 
