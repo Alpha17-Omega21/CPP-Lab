@@ -35,7 +35,7 @@ cout<<"ID: "<<Emp_no<<endl<<"NAME : "<<Emp_name<<endl<<"Designation : "<<Designa
 void main(){
     clrscr();//clears the screen
 EMPLOYEE EMP[10];
-cout<<"Enter the IDs,Names and Location of 10 Employees\n"; //output
+cout<<"Enter the IDs,Names and Designation of 10 Employees\n"; //output
 for (int i = 0; i < 10; i++)
 {  cout<<"Employee No."<<i+1<<endl; //output
    EMP[i].getdata();//executes the function
