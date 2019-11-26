@@ -3,24 +3,25 @@
 Declare a friend class der. In der class, declare private variable ‘n’ and public function sum ().
 In sum (), accept value ‘n’, and find sum of m and n. Print the result.
 Using above classes, write a main (), to accept two values and find sum and print the result.*/
-# include <iostream.h>
-#include<conio.h>
 
-class base
+#include <iostream.h> //library header
+#include<conio.h>//library header
+
+class base //class creation
 {
-	int m;
-	public:
-	base(int a)
+	int m; //variable delclaration
+	public: //access specifiers
+	base(int a) //constructor
 	{
-		m=a;
+		m=a; //variable assignaation
 	}
-	friend class der;
+	friend class der; // make friends with the class der
 };
 
-class der
+class der //class creation
 {
-	int n,temp;
-	public: /*
+	int n,temp; //variable delclaration
+	public: /* //access specifiers
 	der(int m){
 
 		base w(m);
@@ -31,23 +32,23 @@ class der
 		base w(q);
 		temp=w.m;
 		n=b;
-		return temp+n;
+		return temp+n; //returns the value
 	}
 };
 
-void main()
+void main()  //main function
 {
 	int m,n;
 	clrscr();
 
-    cout<<"Enter any two integers :"<<endl;
-    cin>>m>>n;
+    cout<<"Enter any two integers :"<<endl; //output
+    cin>>m>>n; //input
 
 
 
-	der x;
+	der x; //object creation
 
-	cout<<"Sum of two integers :"<<x.sum(n,m);
+	cout<<"Sum of two integers :"<<x.sum(n,m); //output
 
 	getch();
 
