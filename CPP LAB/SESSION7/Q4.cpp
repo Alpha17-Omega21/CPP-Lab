@@ -5,7 +5,7 @@ Using a class called Fib generate the Fibonacci series till this integer. Use co
 class Fib//class creation
 {
 	public:
-	double i,t,x,y,p,z;//delares the variables
+	unsigned long int i,t,x,y,p,z;//delares the variables
 	Fib(int v)
 	{
 		t=v;//intialization
@@ -14,13 +14,13 @@ class Fib//class creation
 	}
 	void ser()
 	{
-	cout<<"The fibonacci series:"<<x<<","<<y<<",";//output
+	cout<<"The fibonacci series:"<<endl<<x<<endl<<y<<endl;//output
 	p=2;
 	while(p<t)
 	   {
 		z=x+y;//value assignment process
 		p++;
-		cout<<z<<",";//output
+		cout<<z<<endl;//output
 		x=y;//value assignment process
 		y=z;//value assignment process
 	   }
