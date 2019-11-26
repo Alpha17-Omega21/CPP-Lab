@@ -3,51 +3,55 @@ value of k. In add(), accept a number and add that to k. Base is a friend class 
 class base, create a public function mul() which accepts number and multiplies that number
 with k. Write a suitable main().*/
 
-#include <iostream.h>
-#include <conio.h>
+#include <iostream.h> //library header
+#include <conio.h> //library header
 
-class test{
+class test{ //class declaration
 
-private:
-int k;
-test(int num){
+private: //access specifier
+int k; //variable declaration
+test(int num){ //constructor
 
     k=num;
 }
-void add(){
-int num2;
-cin>>num2;
-cout<<"The sum of "<<k<<" and "<<num2<<" is "<<num2+k<<endl;
+void add(){ //function
+int num2; //variable declaration
+cin>>num2; //input
+cout<<"The sum of "<<k<<" and "<<num2<<" is "<<num2+k<<endl; //output
 
 }
 friend class Base;
 };
 
 
-class Base{
-public:
-void mul(){
-int assign,product;
-cout<<"Enter a number : ";
-cin>>assign;
+class Base{ //class declaration
+
+public: //access specifier
+
+void mul(){ //function
+
+int assign,product; //variable declaration
+
+cout<<"Enter a number : "; //output
+cin>>assign; //input
 test stuff(assign);
-cout<<"Enter another number for sum : ";
+cout<<"Enter another number for sum : "; //output
 stuff.add();
 
-cout<<"Enter another number for multiplication : ";
-cin>>product;
+cout<<"Enter another number for multiplication : "; //output
+cin>>product; //input
 
-cout<<"The product of "<<stuff.k<<" and "<<product<<" is "<<stuff.k*product;
+cout<<"The product of "<<stuff.k<<" and "<<product<<" is "<<stuff.k*product; //output
 
 }
 
 
 };
 
-void main(){
-clrscr();
+void main(){ //main function
+clrscr(); //clears the screen
 
-Base obj;
-obj.mul();
+Base obj; //object creation
+obj.mul(); //function execution
 getch();
 }
