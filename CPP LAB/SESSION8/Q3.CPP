@@ -15,9 +15,10 @@ Use object array to input details of 5 books.
 #include <string.h>//library header
 #include<stdio.h>//library header
 class  Book{ //class creation
-public: //access specifiers
 int book_code,cost; //declaring the variables
-char title[90],publisher[90],author[90]; //declaring the variables
+char publisher[90],author[90];
+public: //access specifiers
+char title[90]; //declaring the variables
 void input_data(){//input_data() function
 
 cout<<"BOOK CODE: "; //output

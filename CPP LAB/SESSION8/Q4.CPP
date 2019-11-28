@@ -10,9 +10,11 @@ Allow a customer to buy items from the shop and display his bill. Use object arr
 #include <string.h> //library header
 #include <stdlib.h> //library header
 class  Shop{
-public://access specifier
 int quant,cost;// decalration of variables
-char prodname[90],prod_id[90];// decalration of variables
+char prod_id[90];// decalration of variables
+
+public://access specifier
+char prodname[90];// decalration of variables
 
 
 void input_data(){// function memeber of class 'Shop'
