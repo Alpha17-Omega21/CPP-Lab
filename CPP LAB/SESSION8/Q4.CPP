@@ -15,8 +15,6 @@ char prod_id[90];// decalration of variables
 char prodname[90];// decalration of variables
 
 public://access specifier
-
-
 void input_data(){// function memeber of class 'Shop'
 
 cout<<"PRODUCT ID: "; //prompt
