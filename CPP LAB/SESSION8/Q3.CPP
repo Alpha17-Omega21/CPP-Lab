@@ -25,26 +25,26 @@ public: //access specifiers
 
 void input_data(){//input_data() function
 
-cout<<"BOOK CODE: "; //output
+cout<<"BOOK CODE: "; //prompt
 cin>>book_code;//input
-cout<<"TITLE: "; //output
+cout<<"TITLE: "; //prompt
 cin>>title;//input
-cout<<"AUTHOR: "; //output
+cout<<"AUTHOR: "; //prompt
 cin>>author;//input
-cout<<"PUBLISHER: "; //output
+cout<<"PUBLISHER: "; //prompt
 cin>>publisher;//input
-cout<<"PRICE: "; //output
+cout<<"PRICE: "; //prompt
 cin>>cost;//input
 
 }
 
-void output_data(){//output_data() function
+void output_data(){//prompt_data() function
 
-cout<<"BOOK CODE: "<<book_code<<endl; //output
-cout<<"TITLE: "<<title<<endl; //output
-cout<<"AUTHOR: "<<author<<endl; //output
-cout<<"PUBLISHER: "<<publisher<<endl; //output
-cout<<"PRICE: "<<cost<<endl; //output
+cout<<"BOOK CODE: "<<book_code<<endl; //prompt
+cout<<"TITLE: "<<title<<endl; //prompt
+cout<<"AUTHOR: "<<author<<endl; //prompt
+cout<<"PUBLISHER: "<<publisher<<endl; //prompt
+cout<<"PRICE: "<<cost<<endl; //prompt
 
 
 
@@ -56,13 +56,13 @@ int diff = strcmpi(title,bname);
 
 if (diff==0){
 attempt=0;
-cout<<"Here's the search result: \n";//output
+cout<<"Here's the search result: \n";//prompt
 
-cout<<"BOOK CODE: "<<book_code<<endl;//output
-cout<<"TITLE: "<<title<<endl;//output
-cout<<"AUTHOR: "<<author<<endl;//output
-cout<<"PUBLISHER: "<<publisher<<endl;//output
-cout<<"PRICE: "<<cost;//output
+cout<<"BOOK CODE: "<<book_code<<endl;//prompt
+cout<<"TITLE: "<<title<<endl;//prompt
+cout<<"AUTHOR: "<<author<<endl;//prompt
+cout<<"PUBLISHER: "<<publisher<<endl;//prompt
+cout<<"PRICE: "<<cost;//prompt
 
 
 return attempt;
@@ -85,30 +85,30 @@ void main(){
 Book stuff[5];
 
 //INPUT
-cout<<"Enter the Book code, title, author, publisher and cost of 5 Books\n";//output
+cout<<"Enter the Book code, title, author, publisher and cost of 5 Books\n";//prompt
 for (int i = 0; i < 2; i++) //for loop iteration
-{  cout<<"Book No."<<i+1<<endl;//output
+{  cout<<"Book No."<<i+1<<endl;//prompt
    stuff[i].input_data();
     cout<<endl;
 }
-cout<<"Press Enter ";//output
+cout<<"Press Enter ";//prompt
 getch();
 clrscr();// clears the screen
 
-//OUTPUT
-cout<<"The details of 5 Books are :\n\n";//output
+//prompt
+cout<<"The details of 5 Books are :\n\n";//prompt
 for (i = 0; i < 2; i++) //for loop iteration
-{  cout<<"Book No."<<i+1<<endl;//output
+{  cout<<"Book No."<<i+1<<endl;//prompt
    stuff[i].output_data();
     cout<<endl;
 }
-cout<<"Press Enter ";//output
+cout<<"Press Enter ";//prompt
 getch();
 clrscr();// clears the screen
 
 //BOOK SEARCH
-cout<<"BOOK SEARCH\n";//output
-cout<<"Enter the name of the book: ";//output
+cout<<"BOOK SEARCH\n";//prompt
+cout<<"Enter the name of the book: ";//prompt
 cin>>bname; //input
 int trial=0;
 for (i = 0; i < 2; i++) //for loop iteration
@@ -128,7 +128,7 @@ for (i = 0; i < 2; i++) //for loop iteration
 
 if (trial!=0){
 
-    cout<<"No such book was found....";//output
+    cout<<"No such book was found....";//prompt
 
 }
 

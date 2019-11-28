@@ -26,7 +26,7 @@ cin>>Emp_no>>Emp_name>>Designation; //input
 
 void display(){//function creation
 
-cout<<"ID: "<<Emp_no<<endl<<"NAME : "<<Emp_name<<endl<<"Designation : "<<Designation<<"\n";  //output
+cout<<"ID: "<<Emp_no<<endl<<"NAME : "<<Emp_name<<endl<<"Designation : "<<Designation<<"\n";  //prompt
 
 }
 
@@ -35,18 +35,18 @@ cout<<"ID: "<<Emp_no<<endl<<"NAME : "<<Emp_name<<endl<<"Designation : "<<Designa
 void main(){
     clrscr();//clears the screen
 EMPLOYEE EMP[10];
-cout<<"Enter the IDs,Names and Designation of 10 Employees\n"; //output
+cout<<"Enter the IDs,Names and Designation of 10 Employees\n"; //prompt
 for (int i = 0; i < 10; i++)
-{  cout<<"Employee No."<<i+1<<endl; //output
+{  cout<<"Employee No."<<i+1<<endl; //prompt
    EMP[i].getdata();//executes the function
     cout<<endl;
 }
 
 clrscr();//clears the screen
-cout<<"The details of 10 employees are :\n\n"; //output
+cout<<"The details of 10 employees are :\n\n"; //prompt
 
 for (i = 0; i < 10; i++)
-{  cout<<"Employee No."<<i+1<<endl; //output
+{  cout<<"Employee No."<<i+1<<endl; //prompt
    EMP[i].display();//executes the function
     cout<<endl;
 }

@@ -12,9 +12,9 @@ class add //class declaration
 	 public://access specifier
      void accept()  //function
 		{
-		 cout<<"Enter the first number : ";  //output
+		 cout<<"Enter the first number : ";  //prompt
 		 cin>>a; //input
-		 cout<<"Enter the second number : "; //output
+		 cout<<"Enter the second number : "; //prompt
 		 cin>>b; //input
 		 display(); //Calling the function
 		}
@@ -22,7 +22,7 @@ class add //class declaration
 		void display() //function
 		{
 		 int sum=a+b;
-		 cout<<"Sum of "<<a<<" and "<<b<<" = "<<sum<<endl; //output
+		 cout<<"Sum of "<<a<<" and "<<b<<" = "<<sum<<endl; //prompt
 		}
 
     };

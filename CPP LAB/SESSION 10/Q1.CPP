@@ -41,14 +41,14 @@ void main()  //main function
 	int m,n;
 	clrscr();
 
-    cout<<"Enter any two integers :"<<endl; //output
+    cout<<"Enter any two integers :"<<endl; //prompt
     cin>>m>>n; //input
 
 
 
 	der x; //object creation
 
-	cout<<"Sum of two integers :"<<x.sum(n,m); //output
+	cout<<"Sum of two integers :"<<x.sum(n,m); //prompt
 
 	getch();
 

@@ -11,12 +11,12 @@ class base //class creation
 	int a; //variable delclaration
 	void accept()
 	{
-		cout<<"Enter a value of 'a' : ";  //output
+		cout<<"Enter a value of 'a' : ";  //prompt
 		cin>>a; //input
 	}
 	void display()
 	{
-		cout<<"The value of 'a' : "<<a<<endl; //output
+		cout<<"The value of 'a' : "<<a<<endl; //prompt
 	}
 	friend class der; // make friends with the class der
 };
@@ -32,10 +32,10 @@ class der //class creation
 		w.display(); //executes the function
 		if(w.a%2==0) //condition checking
 		{
-			cout<<"\nThe accepted number '"<<w.a<<"' is even."; //output
+			cout<<"\nThe accepted number '"<<w.a<<"' is even."; //prompt
 		}
 		else
-			cout<<"\nThe accepted number '"<<w.a<<"' is odd."; //output
+			cout<<"\nThe accepted number '"<<w.a<<"' is odd."; //prompt
 	}
 };
 

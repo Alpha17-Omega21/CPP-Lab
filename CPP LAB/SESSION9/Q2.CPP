@@ -24,12 +24,12 @@ class rectangle: public Shape //derived class
     int y;//declaration of variables
     void accept()//member functon of class 'Shape'
     {
-    cout<<"Enter any number A:";//output
+    cout<<"Enter any number A:";//prompt
     cin>>a_1;//input
-    cout<<"Enter any number B:";//output
+    cout<<"Enter any number B:";//prompt
     cin>>a_2;//input
     y=printArea(a_1,a_2);
-    cout<<"The area of rectangle:"<<y;//output
+    cout<<"The area of rectangle:"<<y;//prompt
     }
 
 };

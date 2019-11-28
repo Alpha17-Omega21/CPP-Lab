@@ -17,7 +17,7 @@ class palindrome
 	int pldrm()
 	{
 		strcpy(rev,str);//copies the string
-		cout<<endl<<strrev(rev)<<endl;//output
+		cout<<endl<<strrev(rev)<<endl;//prompt
 		z=strcmpi(str,rev);//finds the difference between the strings
 		return z;//return the value
 	}
@@ -27,13 +27,13 @@ void main()
 	char a[50];//variable declaration
 	int b;//variable declaration
 	clrscr();
-	cout<<"Enter any word: ";//output
+	cout<<"Enter any word: ";//prompt
 	cin>>a;//input
 	palindrome y(a);//object creation
 	b=y.pldrm();
 	if(b==0)
-		cout<<endl<<a<<" is Palindrome.";//output
+		cout<<endl<<a<<" is Palindrome.";//prompt
 	else
-		cout<<endl<<a<<" is not Palindrome.";//output
+		cout<<endl<<a<<" is not Palindrome.";//prompt
 	getch();
 }

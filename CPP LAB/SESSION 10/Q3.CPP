@@ -17,7 +17,7 @@ test(int num){ //constructor
 void add(){ //function
 int num2; //variable declaration
 cin>>num2; //input
-cout<<"The sum of "<<k<<" and "<<num2<<" is "<<num2+k<<endl; //output
+cout<<"The sum of "<<k<<" and "<<num2<<" is "<<num2+k<<endl; //prompt
 
 }
 friend class Base;
@@ -32,16 +32,16 @@ void mul(){ //function
 
 int assign,product; //variable declaration
 
-cout<<"Enter a number : "; //output
+cout<<"Enter a number : "; //prompt
 cin>>assign; //input
 test stuff(assign);
-cout<<"Enter another number for sum : "; //output
+cout<<"Enter another number for sum : "; //prompt
 stuff.add();
 
-cout<<"Enter another number for multiplication : "; //output
+cout<<"Enter another number for multiplication : "; //prompt
 cin>>product; //input
 
-cout<<"The product of "<<stuff.k<<" and "<<product<<" is "<<stuff.k*product; //output
+cout<<"The product of "<<stuff.k<<" and "<<product<<" is "<<stuff.k*product; //prompt
 
 }
 

@@ -21,17 +21,17 @@
 	}
        ~OverLoad()//destructor
 	{
-		cout<<"End of the program";//output at the end of the main() program
+		cout<<"End of the program";//prompt at the end of the main() program
 		getch();
 		exit(0);
 	}
     void add()
     {
-	   cout<<"The sum of these three numbers are :"<<a+b+c<<endl;//output
+	   cout<<"The sum of these three numbers are :"<<a+b+c<<endl;//prompt
     }
 	void mult()
 	{
-		cout<<"The product of these two numbers are:"<<a*b<<endl;//output
+		cout<<"The product of these two numbers are:"<<a*b<<endl;//prompt
 	}
 
  };

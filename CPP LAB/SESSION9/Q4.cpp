@@ -32,21 +32,21 @@ int x;//declaration of variable
 
 public://access specifier
 void accept(){
-cout<<"\n\nENTER YOUR DETAILS\n";//output
-cout<<"Enter your ID : ";//output
+cout<<"\n\nENTER YOUR DETAILS\n";//prompt
+cout<<"Enter your ID : ";//prompt
 cin>>ID;//input
 
-cout<<"Enter your name : ";//output
+cout<<"Enter your name : ";//prompt
 cin>>name;//input
 
-cout<<"Enter your address : ";//output
+cout<<"Enter your address : ";//prompt
 cin>>address;//input
 
-cout<<"Enter your age : ";//output
+cout<<"Enter your age : ";//prompt
 cin>>age;//input
 
 repeat:
-cout<<"Enter your score : ";//output
+cout<<"Enter your score : ";//prompt
 cin>>grade;//input
 
 if(grade>0 && grade<=100){//if condition
@@ -54,24 +54,24 @@ x=Passed(grade);
 }
 else {
 
-    cout<<"Enter the score between 0 to 100!"<<endl;//output
+    cout<<"Enter the score between 0 to 100!"<<endl;//prompt
 
     goto repeat;
 }
-cout<<"\n\nDETAILS OF THE EXAMINEE";//output
-cout<<"\n\nID : "<<ID<<endl;//output
-cout<<"NAME : "<<name<<endl;//output
-cout<<"ADDRESS : "<<address<<endl;//output
-cout<<"AGE : "<<age<<endl;//output
-cout<<"EXAMINATION RESULT : ";//output
+cout<<"\n\nDETAILS OF THE EXAMINEE";//prompt
+cout<<"\n\nID : "<<ID<<endl;//prompt
+cout<<"NAME : "<<name<<endl;//prompt
+cout<<"ADDRESS : "<<address<<endl;//prompt
+cout<<"AGE : "<<age<<endl;//prompt
+cout<<"EXAMINATION RESULT : ";//prompt
 
 if(x==1){//if condition
-cout<<"PASSED";//output
+cout<<"PASSED";//prompt
 
 }
 
 else{
-cout<<"FAILED";//output
+cout<<"FAILED";//prompt
 
 
 }

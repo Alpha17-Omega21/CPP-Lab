@@ -25,12 +25,12 @@ Balance=bal;//initialization
 int menu(){
     char choice;
 	repeat: //goto statement source
-    cout<<"MAIN MENU\n"<<endl;//output
-	cout<<"(W)ithdraw money"<<endl;//output
-	cout<<"(D)eposit money"<<endl;//output
-	cout<<"(V)iew Balance"<<endl;//output
-	cout<<"(Q)uit Program"<<endl;//output
-	cout<<"Enter W, D, V or Q to execute the process: ";//output
+    cout<<"MAIN MENU\n"<<endl;//prompt
+	cout<<"(W)ithdraw money"<<endl;//prompt
+	cout<<"(D)eposit money"<<endl;//prompt
+	cout<<"(V)iew Balance"<<endl;//prompt
+	cout<<"(Q)uit Program"<<endl;//prompt
+	cout<<"Enter W, D, V or Q to execute the process: ";//prompt
 	cin>>choice;//input
 switch(choice){
 
@@ -46,7 +46,7 @@ switch(choice){
 
 	case 'V':
 	case 'v':
-    cout<<endl<<"Your Balance is Rs "<<Balance<<endl;//output
+    cout<<endl<<"Your Balance is Rs "<<Balance<<endl;//prompt
 	goto repeat; //goes to the goto source
 
 
@@ -54,7 +54,7 @@ switch(choice){
 	case 'q':
 	for (int i=3;i>=1;i--){
     clrscr(); //clears the screen
-    cout<<"Quitting the program in "<<i<< " seconds.";//output
+    cout<<"Quitting the program in "<<i<< " seconds.";//prompt
     delay(1000);
 
 	}
@@ -62,7 +62,7 @@ switch(choice){
     break;
 
 	default:
-    cout<<"\nInvalid choice. Please enter the given option using characters surrounding the brackets";//output
+    cout<<"\nInvalid choice. Please enter the given option using characters surrounding the brackets";//prompt
 	goto repeat; //goes to the goto source
 
 }
@@ -72,34 +72,34 @@ switch(choice){
 }
 
 int deposit(){
-cout<<endl<<"Enter how much you need to credit to your account : ";//output
+cout<<endl<<"Enter how much you need to credit to your account : ";//prompt
 cin>>Credit;//input
-cout<<"Processing your request....";//output
+cout<<"Processing your request....";//prompt
 Balance = Balance + Credit;
 delay(200*10);
 clrscr();
-cout<<endl<<"Account Number  "<<AccountNumber<<endl;//output
-cout<<endl<<"Name : "<<AccountHolder<<endl;//output
-cout<<endl<<"Your Balance is Rs "<<Balance<<" since you credited Rs "<<Credit<<endl;//output
+cout<<endl<<"Account Number  "<<AccountNumber<<endl;//prompt
+cout<<endl<<"Name : "<<AccountHolder<<endl;//prompt
+cout<<endl<<"Your Balance is Rs "<<Balance<<" since you credited Rs "<<Credit<<endl;//prompt
 getch();
-cout<<endl<<"\nReturning to main menu....";//output
+cout<<endl<<"\nReturning to main menu....";//prompt
 delay(1000);
 clrscr();
 menu();
 }
 
 int withdraw(){
-cout<<endl<<"Enter how much you need to debit from your account : ";//output
+cout<<endl<<"Enter how much you need to debit from your account : ";//prompt
 cin>>Debit;//input
-cout<<"Processing your request....";//output
+cout<<"Processing your request....";//prompt
 Balance = Balance - Debit;
 delay(200*10);
 clrscr();
-cout<<endl<<"Account Number  "<<AccountNumber<<endl;//output
-cout<<endl<<"Name : "<<AccountHolder<<endl;//output
-cout<<endl<<"Your Balance is Rs "<<Balance<<" since you debited Rs "<<Debit<<endl;//output
+cout<<endl<<"Account Number  "<<AccountNumber<<endl;//prompt
+cout<<endl<<"Name : "<<AccountHolder<<endl;//prompt
+cout<<endl<<"Your Balance is Rs "<<Balance<<" since you debited Rs "<<Debit<<endl;//prompt
 getch();
-cout<<endl<<"\nReturning to main menu....";//output
+cout<<endl<<"\nReturning to main menu....";//prompt
 delay(1000);
 clrscr();
 menu();
@@ -113,11 +113,11 @@ char AccountHolder[90];//declaring the variables for main()
 	clrscr();
 
 
-	cout<<"Enter your Account Number : ";//output
+	cout<<"Enter your Account Number : ";//prompt
 	cin>>AccountNumber;//input
-	cout<<endl<<"Enter your name : ";//output
+	cout<<endl<<"Enter your name : ";//prompt
 	cin>>AccountHolder;//input
-    cout<<endl<<"Enter your Balance : ";//output
+    cout<<endl<<"Enter your Balance : ";//prompt
 	cin>>Balance;//input
 	ACCOUNT trial(AccountNumber,AccountHolder,Balance); //creats the object
     clrscr();

@@ -15,23 +15,23 @@ class stock{
       public://access specifiers
       void accept()//member function of class 'stock'
       {
-	  cout<<"Enter item name:";//output
+	  cout<<"Enter item name:";//prompt
 	  cin>>item;//input
-	  cout<<"Enter the price:";//output
+	  cout<<"Enter the price:";//prompt
 	  cin>>price;//input
       }
       void display()//member function of class 'stock'
       {
-	  cout<<"Enter the number of "<<item<<" :";//output
+	  cout<<"Enter the number of "<<item<<" :";//prompt
 	  cin>>item1;//input
 	  total=price*item1;
-	  cout<<"\n\nSHOPPING RECEIPT"<<endl;//output
-	  cout<<"-------------------------"<<endl;//output
-	  cout<<"Item name:"<<item<<endl;//output
-	  cout<<"The price of the "<<item<<":"<<price<<endl;//output
-	  cout<<"========================="<<endl;//output
-	  cout<<"The total cost:"<<total<<endl;//output
-	  cout<<"-------------------------"<<endl;//output
+	  cout<<"\n\nSHOPPING RECEIPT"<<endl;//prompt
+	  cout<<"-------------------------"<<endl;//prompt
+	  cout<<"Item name:"<<item<<endl;//prompt
+	  cout<<"The price of the "<<item<<":"<<price<<endl;//prompt
+	  cout<<"========================="<<endl;//prompt
+	  cout<<"The total cost:"<<total<<endl;//prompt
+	  cout<<"-------------------------"<<endl;//prompt
 
       }
 };

@@ -30,7 +30,7 @@ Using constructor overloading.
 	 }
     ~Shapes() //destructor
 	{
-		cout<<"Done. Thank you."<<endl;//output at the end of the main() program
+		cout<<"Done. Thank you."<<endl;//prompt at the end of the main() program
 		getch();
 		exit (0);
 	}
@@ -38,17 +38,17 @@ Using constructor overloading.
 	{
 		s=(a+b+c)/2;//assigns the value
 		a=sqrt(s*(s-a)*(s-b)*(s-c));//assigns the value
-		cout<<"The area of the triangle is :"<<a<<endl;//output
+		cout<<"The area of the triangle is :"<<a<<endl;//prompt
 	}
 	void rectangle()
 	{
-		cout<<"The area of the rectangle is :"<<d*e<<endl;//output
+		cout<<"The area of the rectangle is :"<<d*e<<endl;//prompt
 	}
 	void radius()
 	{
 		double p=3.14;
 		z=p*f*f;//assigns the value
-		cout<<"The area of the circle is :"<<z<<endl;//output
+		cout<<"The area of the circle is :"<<z<<endl;//prompt
 	}
  };
  void main()

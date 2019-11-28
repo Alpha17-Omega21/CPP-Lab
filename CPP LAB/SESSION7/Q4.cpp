@@ -14,13 +14,13 @@ class Fib//class creation
 	}
 	void ser()
 	{
-	cout<<"The fibonacci series:"<<endl<<x<<endl<<y<<endl;//output
+	cout<<"The fibonacci series:"<<endl<<x<<endl<<y<<endl;//prompt
 	p=2;
 	while(p<t)
 	   {
 		z=x+y;//value assignment process
 		p++;
-		cout<<z<<endl;//output
+		cout<<z<<endl;//prompt
 		x=y;//value assignment process
 		y=z;//value assignment process
 	   }
@@ -30,7 +30,7 @@ void main()
 {
 	clrscr();
 	int n;//delares the variables
-	cout<<"Input an integer below 60:";//output
+	cout<<"Input an integer below 60:";//prompt
 	cin>>n;//input
 	if(n<60)//if condition
 	{
@@ -38,7 +38,7 @@ void main()
 		h.ser();
 	}
 	else{
-		cout<<"Nope. Input rejected (no numbers more than 60) ";//output
+		cout<<"Nope. Input rejected (no numbers more than 60) ";//prompt
 	}
 	getch();
 }

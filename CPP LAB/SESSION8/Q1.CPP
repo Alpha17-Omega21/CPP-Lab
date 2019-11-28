@@ -19,7 +19,7 @@ cin>>StudentID>>STUDNAME;//input
 
 void display(){
 
-cout<<"ID: "<<StudentID<<endl<<"NAME : "<<STUDNAME<<"\n";//output
+cout<<"ID: "<<StudentID<<endl<<"NAME : "<<STUDNAME<<"\n";//prompt
 
 }
 
@@ -28,18 +28,18 @@ cout<<"ID: "<<StudentID<<endl<<"NAME : "<<STUDNAME<<"\n";//output
 void main(){//main ()
     clrscr();
 STUDENT EMP[5];//object creation and array
-cout<<"Enter the IDs and names of 5 students\n";//output
+cout<<"Enter the IDs and names of 5 students\n";//prompt
 for (int i = 0; i < 5; i++)// for loop iteration
-{  cout<<"Student No."<<i+1<<endl;//output
+{  cout<<"Student No."<<i+1<<endl;//prompt
    EMP[i].getdata();//object function
     cout<<endl;
 }
 
 clrscr();
-cout<<"The IDs and names of 5 students are :\n\n";//output
+cout<<"The IDs and names of 5 students are :\n\n";//prompt
 
 for (i = 0; i < 5; i++)// for loop iteration
-{  cout<<"Student No."<<i+1<<endl;//output
+{  cout<<"Student No."<<i+1<<endl;//prompt
    EMP[i].display();//object function
     cout<<endl;
 }

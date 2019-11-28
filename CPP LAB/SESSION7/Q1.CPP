@@ -17,9 +17,9 @@ breadth=25;//intialization
 }
 void area(){ //
 int area=length*breadth; //assigns the value of length*breadth to area 
-cout<<endl<<"The length of rectangle is "<<length<<" cm"; //output
-cout<<endl<<"The breadth of rectangle is "<<breadth<<" cm";//output
-cout<<endl<<"The area of rectangle is "<<area<<" cm"; //output
+cout<<endl<<"The length of rectangle is "<<length<<" cm"; //prompt
+cout<<endl<<"The breadth of rectangle is "<<breadth<<" cm";//prompt
+cout<<endl<<"The area of rectangle is "<<area<<" cm"; //prompt
 
 }
 

@@ -26,7 +26,7 @@ class der: private add//derived class
     }
     void accept()//memeber fucntion of class 'der'
     {
-	cout<<"Enter any number: ";//output
+	cout<<"Enter any number: ";//prompt
 	cin>>y;//input
     }
 
@@ -34,8 +34,8 @@ class der: private add//derived class
     {
 	intial();//function
 	accept();//function
-	cout<<"The value of X is 5 "<<endl;//output
-	cout<<"The sum of ("<<x<<" + "<<y<<") = "<<x+y;//output
+	cout<<"The value of X is 5 "<<endl;//prompt
+	cout<<"The sum of ("<<x<<" + "<<y<<") = "<<x+y;//prompt
     }
 };
 void main()//main()

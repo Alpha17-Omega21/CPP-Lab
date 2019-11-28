@@ -16,7 +16,7 @@ class math //class creation
 	}
 	void accept()
 	{
-		cout<<"Enter any "<<temp<<" numbers to find out their total sum:- "<<endl;//output
+		cout<<"Enter any "<<temp<<" numbers to find out their total sum:- "<<endl;//prompt
 		for(int i=0;i<temp;i++)
 		{
 			cin>>num[i];//input
@@ -28,14 +28,14 @@ class math //class creation
 		{
 			sum=sum+num[i];//input
 		}
-		cout<<endl<<"The sum of the entered "<<temp<<" numnbers are "<<sum;//output
+		cout<<endl<<"The sum of the entered "<<temp<<" numnbers are "<<sum;//prompt
 	}
 };
 void main()
 {
 	int num;//declares the variables
 	clrscr();
-	cout<<"Enter how many numbers you need :- ";//output
+	cout<<"Enter how many numbers you need :- ";//prompt
 	cin>>num;//input
 	math x(num);
 	x.accept();//goes to the accept() in class math
