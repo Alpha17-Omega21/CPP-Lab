@@ -46,10 +46,12 @@ cout<<"PRICE: "<<cost<<endl; //output
 
 }
 
-void search(){//search() function
+int search(char bname[90]){//search() function
+int attempt;
+int diff = strcmpi(title,bname);
 
-
-
+if (diff==0){
+attempt=0;
 cout<<"Here's the search result: \n";//output
 
 cout<<"BOOK CODE: "<<book_code<<endl;//output
@@ -59,12 +61,21 @@ cout<<"PUBLISHER: "<<publisher<<endl;//output
 cout<<"PRICE: "<<cost;//output
 
 
+return attempt;
+}
+else{
+
+attempt=1;
+return attempt;
+
+}
+
 }
 
 };
 
 void main(){
-int f=0; //declaring the variables
+ //declaring the variables
     clrscr();// clears the screen
     char bname[90]; //declaring the variables
 Book stuff[5];
@@ -95,20 +106,27 @@ clrscr();// clears the screen
 cout<<"BOOK SEARCH\n";//output
 cout<<"Enter the name of the book: ";//output
 cin>>bname; //input
+int trial=0;
 for (i = 0; i < 2; i++) //for loop iteration
 {
-
-    if(strcmp(stuff[i].title,bname)==0){// checks the condition
-	f=1;
-	stuff[i].search();
-	}
-}
-    if(f==0)// checks the condition
+    int attempt=stuff[i].search(bname);
+    if (attempt==0){
+	trial=0;
+	break;
+    }
+    else
     {
-	cout<<"No such book was found....";//output
-
+	trial++;
     }
 
+
+}
+
+if (trial!=0){
+
+    cout<<"No such book was found....";//output
+
+}
 
 
     getch();
