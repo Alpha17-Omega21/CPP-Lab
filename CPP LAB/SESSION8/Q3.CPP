@@ -82,11 +82,12 @@ void main(){
  //declaring the variables
     clrscr();// clears the screen
     char bname[90]; //declaring the variables
+    int n=5;
 Book stuff[5];
 
 //INPUT
 cout<<"Enter the Book code, title, author, publisher and cost of 5 Books\n";//prompt
-for (int i = 0; i < 2; i++) //for loop iteration
+for (int i = 0; i < n; i++) //for loop iteration
 {  cout<<"Book No."<<i+1<<endl;//prompt
    stuff[i].input_data();
     cout<<endl;
@@ -97,7 +98,7 @@ clrscr();// clears the screen
 
 //prompt
 cout<<"The details of 5 Books are :\n\n";//prompt
-for (i = 0; i < 2; i++) //for loop iteration
+for (i = 0; i < n; i++) //for loop iteration
 {  cout<<"Book No."<<i+1<<endl;//prompt
    stuff[i].output_data();
     cout<<endl;
@@ -111,7 +112,7 @@ cout<<"BOOK SEARCH\n";//prompt
 cout<<"Enter the name of the book: ";//prompt
 cin>>bname; //input
 int trial=0;
-for (i = 0; i < 2; i++) //for loop iteration
+for (i = 0; i < n; i++) //for loop iteration
 {
     int attempt=stuff[i].search(bname);
     if (attempt==0){
