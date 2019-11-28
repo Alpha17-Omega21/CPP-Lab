@@ -12,9 +12,8 @@ Allow a customer to buy items from the shop and display his bill. Use object arr
 class  Shop{
 int quant,cost;// decalration of variables
 char prod_id[90];// decalration of variables
-
-public://access specifier
 char prodname[90];// decalration of variables
+public://access specifier
 
 
 void input_data(){// function memeber of class 'Shop'
@@ -39,11 +38,15 @@ cout<<"COST: "<<cost<<endl; //output
 }
 
 
-int shopping(){// function memeber of class 'Shop'
+int shopping(char item[90]){// function memeber of class 'Shop'
 
 int repeat=0;
 char ans;
-  //  if(strcmpi(item_name,prodname)==0){
+
+int diff=strcmpi(prodname,item);
+
+
+if (diff==0){
 
 cout<<"How many of "<<prodname<<" do you need? : ";//output
 cin>>quant;//input
@@ -59,10 +62,9 @@ cout<<"COST: Rs "<<cost*quant<<endl;//output
 //SHOPPING AGAIN
 getch();
 mistake:
-cout<<"Do you wish to buy another item? (Enter Y (for Yes) or N (For No) : "<<endl;//output
+cout<<"Do you wish to buy another item? (Enter Y (for Yes) or N (for No) : "<<endl;//output
 cin>>ans;//input
-switch (ans)//switch condition
-{
+switch (ans){
 case 'y':
 case 'Y':
 repeat=1;
@@ -77,15 +79,18 @@ break;
 default:
 cout<<"Please enter either Y or N ";//output
 getch();
-goto mistake;//goto statement
+goto mistake;//goto statement}
+
+
+}
+}
+else{return repeat=2;}
+
 
 }
 
 
 
-
-
-}
 
 };
 
@@ -124,17 +129,26 @@ cout<<"Enter the name of the item you wish to buy: ";//output
 cin>>item;//input
 
 int limit=0;//intialization
-for (i = 0; i < 3; i++){// for loop iteration
-int repeat;
-    if(strcmpi(item,stuff[i].prodname)==0){
-	repeat=stuff[i].shopping();//assigns the returned value of shopping() to 'repeat'
-	 if (repeat!=0){goto again;}//goes to the repeat: position if the value is 1
-    }else{limit++;}//increments the limit if the searched shopping item isn't found in the shopping details
-}
 
+
+for (i = 0; i < 2; i++) //for loop iteration
+{
+    int repeat=stuff[i].shopping(item);
+    if (repeat==0){
+	break;
+    }
+    else if (repeat==1){
+	goto again;
+    }
+    else if(repeat==2){
+	limit++;
+	continue;
+    }
+}
 char x;//declaration of variable
-if (limit==3){
-cout<<endl<<"Sorry, no such item was found. Would you like to try again? "<<endl;//output
+
+if(limit!=0){
+cout<<endl<<"Sorry, no such item was found. Would you like to try searching again? "<<endl;//output
 cout<<"(Y for Yes, N for No) : ";//output
 wrong:
 cin>>x;//input
