@@ -3,55 +3,46 @@ value of k. In add(), accept a number and add that to k. Base is a friend class 
 class base, create a public function mul() which accepts number and multiplies that number
 with k. Write a suitable main().*/
 
-#include <iostream.h> //library header
+# include <iostream.h> //library header
 #include <conio.h> //library header
 
-class test{ //class declaration
-
-private: //access specifier
-int k; //variable declaration
-test(int num){ //constructor
-
-    k=num;
-}
-void add(){ //function
-int num2; //variable declaration
-cin>>num2; //input
-cout<<"The sum of "<<k<<" and "<<num2<<" is "<<num2+k<<endl; //prompt
-
-}
-friend class Base;
+class test //class declaration
+{
+	int k,b; //variable declaration
+	int add()//function declaration
+	{
+		k=10;
+		cout<<"k=10"<<endl; //prompt
+		cout<<"\nEnter any number : "; //prompt
+		cin>>b; //input
+		
+		return k+b; //returns the value
+	}
+	friend class base; //friend class declaration
 };
 
-
-class Base{ //class declaration
-
-public: //access specifier
-
-void mul(){ //function
-
-int assign,product; //variable declaration
-
-cout<<"Enter a number : "; //prompt
-cin>>assign; //input
-test stuff(assign);
-cout<<"Enter another number for sum : "; //prompt
-stuff.add();
-
-cout<<"Enter another number for multiplication : "; //prompt
-cin>>product; //input
-
-cout<<"The product of "<<stuff.k<<" and "<<product<<" is "<<stuff.k*product; //prompt
-
-}
-
-
+class base //class declaration
+{
+	int n,t; //variable declaration
+	public: //access specifier
+	int mul() //function declaration
+	{
+		test obj; //object declaration of the class test
+		cout<<"Added to k gives : "<<obj.add();  //prompt
+		cout<<"\n\nEnter any number :"; //prompt
+		cin>>n; //input
+		obj.k=obj.k*n;
+		return obj.k;//returns the vaalue
+	}
 };
 
-void main(){ //main function
-clrscr(); //clears the screen
+void main() //main function
+{
 
-Base obj; //object creation
-obj.mul(); //function execution
-getch();
+	clrscr(); //clears the screen
+
+	base x; //object declaration of the class base
+	cout<<"Multiply by k :"<<x.mul(); //prompt
+
+	getch();
 }

@@ -16,8 +16,8 @@ class add //class declaration
 		 cin>>a; //input
 		 cout<<"Enter the second number : "; //prompt
 		 cin>>b; //input
-		 display(); //Calling the function
-		}
+	
+		  	}
 		
 		void display() //function
 		{
@@ -31,12 +31,13 @@ class add //class declaration
 	{
 	 clrscr();
 
-   add s;
+   add obj;
    add *ptr;
 
-	ptr=&s; //assigns the address of the object that points when called
+	ptr=&obj; //assigns the address of the object that points when called
 
     ptr->accept(); //pointed object
+    ptr->display(); //pointed object
 
 	getch();
 }

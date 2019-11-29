@@ -1,51 +1,51 @@
  /*2. Create a class called base with private variable ‘a’ and private functions - accept () and
 display() to accept and display value of ‘a’. Declare class der as a friend class in class base. In
-class base, create public function der (). In der(), check if the accepted number ‘a’ is odd or
+class der, create public function der1(). In der1(), check if the accepted number ‘a’ is odd or
 even. Using above classes, write main ()*/
 
-#include <iostream.h> //library header
-#include<conio.h> //library header
+# include <iostream.h>//library header
+#include<conio.h>//library header
 
-class base //class creation
+class base //class declaration
 {
-	int a; //variable delclaration
-	void accept()
+	int a;//variable declaration
+	void accept() //function
 	{
-		cout<<"Enter a value of 'a' : ";  //prompt
-		cin>>a; //input
+		cout<<"Enter a value of 'a' : "; //prompt
+		cin>>a;//input
 	}
-	void display()
+	void display() //function
 	{
 		cout<<"The value of 'a' : "<<a<<endl; //prompt
 	}
-	friend class der; // make friends with the class der
+	friend class der; //friend class declaration
 };
 
-class der //class creation
+class der //class declaration
 {
-	int n,temp; //variable delcaration
-	public: //access specifiers
-	void check() //funcction block
+	int n,temp;//variable declaration
+	public: //access specifier
+	void der1()//function
 	{
-		base w;
-		w.accept();  //executes the function
-		w.display(); //executes the function
-		if(w.a%2==0) //condition checking
+		base x;  //object declaration of the class base
+		x.accept(); //function execution
+		x.display(); //function execution
+		if(x.a%2==0)//if condition
 		{
-			cout<<"\nThe accepted number '"<<w.a<<"' is even."; //prompt
+			cout<<"\nThe number '"<<x.a<<"' is even."; //prompt
 		}
 		else
-			cout<<"\nThe accepted number '"<<w.a<<"' is odd."; //prompt
+			cout<<"\nThe number '"<<x.a<<"' is odd."; //prompt
 	}
 };
 
-void main() //main function
+void main()//main function
 {
 	
 	clrscr();
 
-	der x;
-	x.check();
+	der y; //object declaration of the class der
+	y.der1(); //function execution
 
 	getch();
 }

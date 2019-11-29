@@ -20,11 +20,9 @@ class stock{
 	  cout<<"Enter the price:";//prompt
 	  cin>>price;//input
       }
-      void display()//member function of class 'stock'
+      void display(long int total)//member function of class 'stock'
       {
-	  cout<<"Enter the number of "<<item<<" :";//prompt
-	  cin>>item1;//input
-	  total=price*item1;
+	  
 	  cout<<"\n\nSHOPPING RECEIPT"<<endl;//prompt
 	  cout<<"-------------------------"<<endl;//prompt
 	  cout<<"Item name:"<<item<<endl;//prompt
@@ -41,7 +39,10 @@ class totalcost: public stock//derived class
    void tot()
    {
        accept();//function
-       display();//function
+      cout<<"Enter the number of "<<item<<" :";//prompt
+	  cin>>item1;//input
+	  total=price*item1;
+       display(total);//function
    }
 };
 void main()

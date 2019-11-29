@@ -12,12 +12,12 @@ class Student{//parent class
 protected://access specifier
 char name[90],ID[10],address[90];//declaration of variables
 double grade,age;//declaration of variables
-int Passed(double grade){ 
+bool Passed(double grade){ 
     
 //Turbo C IDE doesn't support boolean keywords as it's an outdated and obsolete program
 //So, we use int datatype to return either 0 or 1
                             
-int false=0,true=1;//declaration of variables
+//int false=0,true=1;//declaration of variables
 if (grade>70.0){return true;}//if condition
 else{return false;}
 

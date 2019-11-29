@@ -2,7 +2,7 @@
 to enter two readings. The program determines the lower of the two readings
 and then displays a message indicating the action to be performed based on the
 following table:
-Use the “if else” statement to complete the program below:
+Use the “if else" statement to complete the program below:
 Range of Reading Action to be Taken
 -------------------------------------------------------------------------------------
 7 or higher                             Increase heat

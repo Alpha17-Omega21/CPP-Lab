@@ -4,51 +4,38 @@ Declare a friend class der. In der class, declare private variable ‘n’ and p
 In sum (), accept value ‘n’, and find sum of m and n. Print the result.
 Using above classes, write a main (), to accept two values and find sum and print the result.*/
 
-#include <iostream.h> //library header
+# include <iostream.h>//library header
 #include<conio.h>//library header
 
-class base //class creation
+class base//class declaration
 {
-	int m; //variable delclaration
-	public: //access specifiers
-	base(int a) //constructor
+	int m;//variable declaration
+	public://access specifier
+	void accept()//function
 	{
-		m=a; //variable assignaation
+		cout<<"Enter any two integers :"<<endl;//prompt
+		cin>>m; //input
 	}
-	friend class der; // make friends with the class der
+	friend class der;//friend class declaration
 };
 
-class der //class creation
+class der//class declaration
 {
-	int n,temp; //variable delclaration
-	public: /* //access specifiers
-	der(int m){
-
-		base w(m);
-		temp=w.q;
-	}                */
-	int sum(int b, int q)
+	int n;//variable declaration
+public://access specifier
+	void sum()//function
 	{
-		base w(q);
-		temp=w.m;
-		n=b;
-		return temp+n; //returns the value
+		base obj;//object declaration of the class base
+		obj.accept();//function execution
+		cin>>n; //input
+		cout<<"\n Sum of two integers : "<<obj.m+n;//prompt
 	}
 };
 
-void main()  //main function
+void main()//main function
 {
-	int m,n;
+	der y;//object declaration of the class der
 	clrscr();
-
-    cout<<"Enter any two integers :"<<endl; //prompt
-    cin>>m>>n; //input
-
-
-
-	der x; //object creation
-
-	cout<<"Sum of two integers :"<<x.sum(n,m); //prompt
-
+y.sum();//function execution
 	getch();
-
+}
